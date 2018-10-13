@@ -17,7 +17,7 @@ namespace ContosoUniversity.Controllers
         }
 
         public ActionResult About()
-        {
+        {//relation between student and enroll
             IQueryable<EnrollmentDateGroup> data = from student in db.Students
                                                    group student by student.EnrollmentDate into dateGroup
                                                    select new EnrollmentDateGroup()
